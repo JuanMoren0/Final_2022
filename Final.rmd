@@ -36,6 +36,7 @@ druggiesf <- filter(Females, DrugUser=="yes")
 
 ## Males
 
+
 ### Bar
 
 ### Numerical
@@ -46,9 +47,32 @@ druggiesf <- filter(Females, DrugUser=="yes")
 ## Females
 
 
+### Bar
+
+### Numerical
+
+### Infermental
+
+
+
 ## LGBTQ
+
+
+### Bar
+
+### Numerical
+
+### Infermental
+
 
 
 
 ## Druggies
+
+
+### Bar
+
+### Numerical
+
+### Infermental
 
