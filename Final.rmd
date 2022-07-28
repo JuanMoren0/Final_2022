@@ -63,7 +63,13 @@ After creating a group made up of purely males we take   the data and create a b
 #### Numerical Descriptive Results
 
 
+```{r}
+table1m <- xtabs(~infected + treatment, data=Males)
+rowPerc(table1m)
+colPerc(table1m)
+```
 
+Taking the group purely made of males once more, we now   have created a data sheet, that show the same as the   visual above, showing that the vaccine is working for   males.  
 
 ###Inferential Results
 
