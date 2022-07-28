@@ -56,11 +56,13 @@ basicCCm <- ggplot(ddm,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCCm + geom_bar(stat="identity", position = "dodge")
 ```
 
-
+After creating a group made up of purely males we take   the data and create a bar chart so there can be a   visual of he data of the vaccine effectiveness when   used on males.    
 
 
 
 #### Numerical Descriptive Results
+
+
 
 
 ###Inferential Results
