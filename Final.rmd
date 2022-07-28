@@ -108,6 +108,12 @@ basicCCf + geom_bar(stat="identity", position = "dodge")
 
 #### Numerical Descriptive Results
 
+```{r}
+table1f <- xtabs(~infected + treatment, data=Males)
+rowPerc(table1f)
+colPerc(table1f)
+```
+
 ###Inferential Results
 
 
