@@ -76,7 +76,8 @@ Taking the group purely made of males once more, we now   have created a data sh
 ```{r}
 chisq.test(table1m)
 chisqtestGC(table1m)
-fisher.test(table1m)
+malefisher<- fisher.test(table1m)
+malefisher
 ```
 
 Here we have taken the male group for one last time and     have ran the Fisher's Exact test. This shows that the     p-value proves that those who have taken the placebo     are more likely to catch Covid.    
@@ -86,10 +87,17 @@ Here we have taken the male group for one last time and     have ran the Fisher'
 ```{r}
 efficacym <- ((2.092161/(1+2.092161)*100))
 efficacym
-
 ```
 
-After looking at all the data created and shown, I can   safely say that I recommend Males in general should   take the vaccine as it can lower the chances to catch   Covid.  
+```{r}
+malefisherlow <- (malefisher$conf.int[1])
+malefisherlow
+malefisherhigh<- (malefisher$conf.int[2])
+malefisherhigh
+```
+
+
+
 
 
 ## Females
