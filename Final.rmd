@@ -81,9 +81,15 @@ fisher.test(table1m)
 
 Here we have taken the male group for one last time and     have ran the Fisher's Exact test. This shows that the     p-value proves that those who have taken the placebo     are more likely to catch Covid.    
 
-### Effectiveness 
+### Efficacy
 
-After looking at all the data created and shown I can   safely say that I recommend Males in general should   take the vaccine as it can lower the chances to catch   Covid.  
+```{r}
+efficacym <- ((2.092161/(1+2.092161)*100))
+efficacym
+
+```
+
+After looking at all the data created and shown, I can   safely say that I recommend Males in general should   take the vaccine as it can lower the chances to catch   Covid.  
 
 
 ## Females
@@ -125,7 +131,7 @@ fisher.test(table1f)
 ```
 
 
-### Effectiveness 
+### Efficacy 
 
 
 
@@ -170,7 +176,7 @@ fisher.test(table1Q)
 ```
 
 
-### Effectiveness 
+### Efficacy 
 
 
 
@@ -220,6 +226,6 @@ fisher.test(table1d)
 ```
 
 
-### Effectiveness 
+### Efficacy 
 
 
