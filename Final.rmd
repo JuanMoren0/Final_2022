@@ -18,6 +18,7 @@ FinalDat <-read.csv(file="final_Data.csv",header=TRUE)
 FinalData <- FinalDat  %>% select(-one_of("X"))
 FinalData <- FinalData %>%
 mutate(across(where(is.character), as.factor))
+options(digits = 1)
 ```
 
 # Introduction
@@ -96,8 +97,20 @@ malefisherhigh<- (malefisher$conf.int[2])
 malefisherhigh
 ```
 
+```{r}
+efficacymalelow <- (malefisherlow/(1+malefisherlow)*100)
+efficacymalelow
+```
+
+```{r}
+efficacymalehigh <- (malefisherhigh/(1+malefisherhigh)*100)
+efficacymalehigh
+```
+
+Here we have the confidence interval of 95%  from`r efficacymalelow` to `r efficacymalehigh`.
 
 
+### Conclusion and Recommendation
 
 
 ## Females
