@@ -114,7 +114,13 @@ rowPerc(table1f)
 colPerc(table1f)
 ```
 
-###Inferential Results
+### Inferential Results
+
+```{r}
+chisq.test(table1f)
+chisqtestGC(table1f)
+fisher.test(table1f)
+```
 
 
 ### Effectiveness 
