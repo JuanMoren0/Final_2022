@@ -134,6 +134,22 @@ fisher.test(table1f)
 
 #### Graphical Descriptive Results
 
+```{r}
+ddQ <- lgbtq %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicCQ <- ggplot(ddQ,aes(x=infected,y=count,fill= treatment))
+basicCQ + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCCQ <- ggplot(ddQ,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCCQ + geom_bar(stat="identity", position = "dodge")
+```
+
+
 #### Numerical Descriptive Results
 
 ###Inferential Results
