@@ -73,6 +73,12 @@ Taking the group purely made of males once more, we now   have created a data sh
 
 ###Inferential Results
 
+```{r}
+chisq.test(table1m)
+chisqtestGC(table1m)
+fisher.test(table1m)
+```
+Here we have taken the male group and have ran the Fisher's Exact test.
 
 ### Effectiveness 
 
@@ -83,6 +89,22 @@ Taking the group purely made of males once more, we now   have created a data sh
 ### Descriptive Results
 
 #### Graphical Descriptive Results
+
+```{r}
+ddf <- Females %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicCf <- ggplot(ddf,aes(x=infected,y=count,fill= treatment))
+basicCf + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCCf <- ggplot(ddf,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCCf + geom_bar(stat="identity", position = "dodge")
+```
+
 
 #### Numerical Descriptive Results
 
