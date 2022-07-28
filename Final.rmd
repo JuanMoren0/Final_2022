@@ -78,10 +78,12 @@ chisq.test(table1m)
 chisqtestGC(table1m)
 fisher.test(table1m)
 ```
-Here we have taken the male group and have ran the Fisher's Exact test.
+
+Here we have taken the male group for one last time and     have ran the Fisher's Exact test. This shows that the     p-value proves that those who have taken the placebo     are more likely to catch Covid.    
 
 ### Effectiveness 
 
+After looking at all the data created and shown I can   safely say that I recommend Males in general should   take the vaccine as it can lower the chances to catch   Covid.  
 
 
 ## Females
@@ -109,7 +111,7 @@ basicCCf + geom_bar(stat="identity", position = "dodge")
 #### Numerical Descriptive Results
 
 ```{r}
-table1f <- xtabs(~infected + treatment, data=Males)
+table1f <- xtabs(~infected + treatment, data=Females)
 rowPerc(table1f)
 colPerc(table1f)
 ```
@@ -152,7 +154,20 @@ basicCCQ + geom_bar(stat="identity", position = "dodge")
 
 #### Numerical Descriptive Results
 
+```{r}
+table1Q <- xtabs(~infected + treatment, data=lgbtq)
+rowPerc(table1Q)
+colPerc(table1Q)
+```
+
+
 ###Inferential Results
+
+```{r}
+chisq.test(table1Q)
+chisqtestGC(table1Q)
+fisher.test(table1Q)
+```
 
 
 ### Effectiveness 
@@ -163,13 +178,46 @@ basicCCQ + geom_bar(stat="identity", position = "dodge")
 
 ## Druggies
 
+
+
+
+
 ### Descriptive Results
 
 #### Graphical Descriptive Results
 
+```{r}
+ddd <- druggies %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicCd <- ggplot(ddd,aes(x=infected,y=count,fill= treatment))
+basicCd + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCCd <- ggplot(ddm,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCCd + geom_bar(stat="identity", position = "dodge")
+```
+
+
 #### Numerical Descriptive Results
 
+```{r}
+table1d <- xtabs(~infected + treatment, data=druggies)
+rowPerc(table1d)
+colPerc(table1d)
+```
+
+
 ###Inferential Results
+
+```{r}
+chisq.test(table1d)
+chisqtestGC(table1d)
+fisher.test(table1d)
+```
 
 
 ### Effectiveness 
