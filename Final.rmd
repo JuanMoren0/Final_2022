@@ -21,6 +21,8 @@ mutate(across(where(is.character), as.factor))
 options(digits = 1)
 ```
 
+
+
 # Introduction
 
 
@@ -33,6 +35,11 @@ Females <- filter(FinalData, sex== "F")
 lgbtq <- filter(FinalData, LGBTQ=="gay")
 druggies <- filter(FinalData, DrugUser=="yes")
 ```
+
+# Process
+
+First we will divide the data into four separate groups as we are   looking at four different groups. The groups are Male, Females, LGBTQ,   and Druggies.   
+After properly separating the data to their respective groups we will   look at Descriptive Results both Graphical, and Numerical, as well as   inferential Results and the effectiveness of the vaccine towards each group.  
 
 
 ## Males
