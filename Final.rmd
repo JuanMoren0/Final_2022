@@ -3,7 +3,7 @@ title: "Covid91 vaccine study Final2022"
 author: "Juan Moreno"
 output: 
   html_document:
-    number_sections: true
+    number_sections: false
     toc: true
     toc_depth: 5
 date: "`r Sys.Date()`" 
@@ -320,7 +320,7 @@ fisher.test(table1d)
 dfisher<- fisher.test(table1d)
 dfisher
 ```
-As we take a look at the Fisher's exaxt test, the P-value supoorts our idea of the vaccine not working on druggies.  
+As we take a look at the Fisher's exact test, the P-value supports our idea of the vaccine not working on druggies.  
 
 ### Efficacy 
 
