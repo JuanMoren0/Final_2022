@@ -290,9 +290,35 @@ colPerc(table1d)
 chisq.test(table1d)
 chisqtestGC(table1d)
 fisher.test(table1d)
+dfisher<- fisher.test(table1d)
+dfisher
 ```
 
 
 ### Efficacy 
+
+
+```{r}
+#used to create efficacy for males
+
+
+efficacyd <- ((dfisher$estimate/(1+dfisher$estimate)*100))
+
+dfisherlow <- (dfisher$conf.int[1])
+
+dfisherhigh<- (dfisher$conf.int[2])
+
+dfisherlow <- (dfisherlow/(1+dfisherlow)*100)
+
+efficacydhigh <- (dfisherhigh/(1+dfisherhigh)*100)
+```
+
+
+
+
+
+
+### Conclusion and Recommendation
+
 
 
