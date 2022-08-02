@@ -294,6 +294,10 @@ basicCCd <- ggplot(ddm,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCCd + geom_bar(stat="identity", position = "dodge")
 ```
 
+Looking at the graph we can clearly see that those who have taken the vaccine are more likely to catch covid, and this carries out when   we look at the graph percentage wise.  
+
+
+
 
 #### Numerical Descriptive Results
 
@@ -303,6 +307,7 @@ rowPerc(table1d)
 colPerc(table1d)
 ```
 
+Looking at the numerical results we can see specific numbers and percentage of how many are infected in the group.  
 
 ###Inferential Results
 
@@ -313,7 +318,7 @@ fisher.test(table1d)
 dfisher<- fisher.test(table1d)
 dfisher
 ```
-
+As we take a look at the Fisher's exaxt test, the P-value supoorts our idea of the vaccine not working on druggies.  
 
 ### Efficacy 
 
@@ -328,13 +333,13 @@ dfisherlow <- (dfisher$conf.int[1])
 
 dfisherhigh<- (dfisher$conf.int[2])
 
-dfisherlow <- (dfisherlow/(1+dfisherlow)*100)
+efficacydlow <- (dfisherlow/(1+dfisherlow)*100)
 
 efficacydhigh <- (dfisherhigh/(1+dfisherhigh)*100)
 ```
 
 
-
+With the efficacy being `r efficacyd`% Here we have the confidence interval of 95%  from `r efficacydlow` to `r efficacydhigh`.    
 
 
 
