@@ -188,7 +188,7 @@ With the efficacy being `r efficacyf`% Here we have the confidence interval of 9
 
 ### Conclusion and Recommendation
 
-At a glace we can see that it's hard to tell but using fisher's exact test and looking at the confidence interval results, its best for females to take the vaccine as it has a slighter chance of not catching covid.  
+At a glace we can see that it's hard to tell but using fisher's exact test and looking at the confidence interval results, in   conclusion its best for females to take the vaccine as it has a slighter chance of not catching covid.  
 
 
 
@@ -266,12 +266,11 @@ With the efficacy being `r efficacyQ`% Here we have the confidence interval of 9
 
 ### Conclusion and Recommendation
 
-Surprisingly when looking at all the data we can see that the LGBTQ community should not takw the vaccine as it will make them most likely to contract covid, then those whp have taken the placebo.
+Surprisingly when looking at all the data we can see that the LGBTQ community should not take the vaccine as it will make them most likely to contract covid, then those who have taken the placebo.
 
 
 
 ## Druggies
-
 
 
 
@@ -348,6 +347,6 @@ With the efficacy being `r efficacyd`% Here we have the confidence interval of 9
 
 ### Conclusion and Recommendation
 
-Without a surprise people who do drugs should not take the vaccine as it incresses the chances of contracting covid greatly, then if they were to not take the vaccine.
+Without a surprise people who do drugs should not take the vaccine as it increases the chances of contracting covid greatly, then if   they were to not take the vaccine. I believe this is due to drug use as it can weaken the system and making other vaccines or drugs   useless.  
 
 
