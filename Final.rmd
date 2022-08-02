@@ -73,7 +73,7 @@ colPerc(table1m)
 
 Taking the group purely made of males once more, we now   have created a data sheet, that show the same as the   visual above, showing that the vaccine is working for   males.  
 
-###Inferential Results
+### Inferential Results
 
 ```{r}
 chisq.test(table1m)
@@ -107,6 +107,9 @@ With the efficacy being `r efficacym`% Here we have the confidence interval of 9
 
 ### Conclusion and Recommendation
 
+
+
+Looking at all the evidence I can confidently say that for males as a group they should take the vaccine as it lowers the chances of   catching covid. As we were looking at the information we can also say that there was little to no mistake as supported by Fisher's exact test.  
 
 
 
@@ -185,7 +188,7 @@ With the efficacy being `r efficacyf`% Here we have the confidence interval of 9
 
 ### Conclusion and Recommendation
 
-
+At a glace we can see that it's hard to tell but using fisher's exact test and looking at the confidence interval results, its best for females to take the vaccine as it has a slighter chance of not catching covid.  
 
 
 
@@ -227,7 +230,7 @@ colPerc(table1Q)
 
 Taken the data and putting it into numerical terms we can see specific numeber as well as percentage of the data.  
 
-###Inferential Results
+### Inferential Results
 
 ```{r}
 chisq.test(table1Q)
@@ -263,8 +266,7 @@ With the efficacy being `r efficacyQ`% Here we have the confidence interval of 9
 
 ### Conclusion and Recommendation
 
-
-
+Surprisingly when looking at all the data we can see that the LGBTQ community should not takw the vaccine as it will make them most likely to contract covid, then those whp have taken the placebo.
 
 
 
@@ -309,7 +311,8 @@ colPerc(table1d)
 
 Looking at the numerical results we can see specific numbers and percentage of how many are infected in the group.  
 
-###Inferential Results
+
+### Inferential Results
 
 ```{r}
 chisq.test(table1d)
@@ -345,5 +348,6 @@ With the efficacy being `r efficacyd`% Here we have the confidence interval of 9
 
 ### Conclusion and Recommendation
 
+Without a surprise people who do drugs should not take the vaccine as it incresses the chances of contracting covid greatly, then if they were to not take the vaccine.
 
 
