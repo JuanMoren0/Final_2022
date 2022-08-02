@@ -36,7 +36,7 @@ lgbtq <- filter(FinalData, LGBTQ=="gay")
 druggies <- filter(FinalData, DrugUser=="yes")
 ```
 
-# Process
+# Process Explanation
 
 First we will divide the data into four separate groups as we are   looking at four different groups. The groups are Male, Females, LGBTQ,   and Druggies.   
 After properly separating the data to their respective groups we will   look at Descriptive Results both Graphical, and Numerical, as well as   inferential Results and the effectiveness of the vaccine towards each group.  
@@ -89,7 +89,7 @@ malefisher<- fisher.test(table1m)
 malefisher
 ```
 
-Here we have taken the male group for one last time and     have ran the Fisher's Exact test. This shows that the     p-value proves that those who have taken the placebo     are more likely to catch Covid.    
+Here we have taken the male group for one last time and     have ran the Fisher's Exact test. This shows that the     p-value proves that those who have taken the placebo     are twice more likely to catch Covid.    
 
 ### Efficacy
 
@@ -166,8 +166,7 @@ femalefisher<- fisher.test(table1f)
 femalefisher
 ```
 
-Taking the data and running the data through Fisher's exact test, we can see that the p-value proves that taking the vaccine can be   helpful then not taking it.  
-
+Taking the data and running the data through Fisher's exact test, we can see that the p-value proves that taking the vaccine can be   helpful then not taking it as those who taken the placebo had roughly 1.25 increase in contracting the vaccine.   
 
 
 ### Efficacy 
@@ -247,7 +246,7 @@ Qfisher<- fisher.test(table1Q)
 Qfisher
 ```
 
-As we look at the Fisher's Exact test we see that the p-value does lead us to believe that there is a difference but taking what is   known we see that those who have taken the placebo will do better then those who take the vaccine.  
+As we look at the Fisher's Exact test we see that the p-value does lead us to believe that there is a difference but taking what is   known we see that those who have taken the placebo will do better then those who take the vaccine, we can see that people who have taken the placebo has roughly 0.1 less then those who have taken the vaccine.  
 
 ### Efficacy 
 
