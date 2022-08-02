@@ -23,6 +23,7 @@ options(digits = 1)
 
 # Introduction
 
+
 A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
 ```{r, include='FALSE'}
@@ -131,6 +132,9 @@ basicCCf + geom_bar(stat="identity", position = "dodge")
 ```
 
 
+Looking at the graph we can see that in numbers both placebo and    vaccine that were given out seems to be equal. Looking at the   percentage graph we can see that those who have given the placebo   contracted covid then those who taken the vaccine.  
+
+
 #### Numerical Descriptive Results
 
 ```{r}
@@ -138,6 +142,9 @@ table1f <- xtabs(~infected + treatment, data=Females)
 rowPerc(table1f)
 colPerc(table1f)
 ```
+
+Looking at the numerical results for the graph above we can see that   even numerical wise we see that again those who have taken the   vaccine we can see that they are less likely to contract covid.   
+
 
 ### Inferential Results
 
@@ -148,6 +155,9 @@ fisher.test(table1f)
 femalefisher<- fisher.test(table1f)
 femalefisher
 ```
+
+Taking the data and running the data through Fisher's exact test, we can see that the p-value proves that taking the vaccine can be   helpful then not taking it.  
+
 
 
 ### Efficacy 
@@ -166,6 +176,11 @@ efficacyfemalelow <- (femalefisherlow/(1+femalefisherlow)*100)
 
 efficacyfemalehigh <- (femalefisherhigh/(1+femalefisherhigh)*100)
 ```
+
+
+With the efficacy being `r efficacyf`% Here we have the confidence interval of 95%  from `r efficacyfemalelow` to `r efficacyfemalehigh`. 
+
+
 
 
 ### Conclusion and Recommendation
@@ -199,6 +214,9 @@ basicCCQ + geom_bar(stat="identity", position = "dodge")
 ```
 
 
+Taking a look at the LGBTQ community we can see that those who have taken the vaccine contracted covid then those who have taken the placebo. This is also true when looking at the percentage graph.  
+
+
 #### Numerical Descriptive Results
 
 ```{r}
@@ -207,6 +225,7 @@ rowPerc(table1Q)
 colPerc(table1Q)
 ```
 
+Taken the data and putting it into numerical terms we can see specific numeber as well as percentage of the data.  
 
 ###Inferential Results
 
@@ -218,6 +237,7 @@ Qfisher<- fisher.test(table1Q)
 Qfisher
 ```
 
+As we look at the Fisher's Exact test we see that the p-value does lead us to believe that there is a difference but taking what is   known we see that those who have taken the placebo will do better then those who take the vaccine.  
 
 ### Efficacy 
 
@@ -232,13 +252,13 @@ Qfisherlow <- (Qfisher$conf.int[1])
 
 Qfisherhigh<- (Qfisher$conf.int[2])
 
-Qfisherlow <- (Qfisherlow/(1+Qfisherlow)*100)
+efficacyQlow <- (Qfisherlow/(1+Qfisherlow)*100)
 
 efficacyQhigh <- (Qfisherhigh/(1+Qfisherhigh)*100)
 ```
 
 
-
+With the efficacy being `r efficacyQ`% Here we have the confidence interval of 95%  from `r efficacyQlow` to `r efficacyQhigh`.   
 
 
 ### Conclusion and Recommendation
