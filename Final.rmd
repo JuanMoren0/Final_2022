@@ -168,7 +168,7 @@ efficacyfemalehigh <- (femalefisherhigh/(1+femalefisherhigh)*100)
 ```
 
 
-
+### Conclusion and Recommendation
 
 
 
@@ -214,16 +214,42 @@ colPerc(table1Q)
 chisq.test(table1Q)
 chisqtestGC(table1Q)
 fisher.test(table1Q)
+Qfisher<- fisher.test(table1Q)
+Qfisher
 ```
 
 
 ### Efficacy 
 
 
+```{r}
+#used to create efficacy for males
+
+
+efficacyQ <- ((Qfisher$estimate/(1+Qfisher$estimate)*100))
+
+Qfisherlow <- (Qfisher$conf.int[1])
+
+Qfisherhigh<- (Qfisher$conf.int[2])
+
+Qfisherlow <- (Qfisherlow/(1+Qfisherlow)*100)
+
+efficacyQhigh <- (Qfisherhigh/(1+Qfisherhigh)*100)
+```
+
+
+
+
+
+### Conclusion and Recommendation
+
+
+
 
 
 
 ## Druggies
+
 
 
 
